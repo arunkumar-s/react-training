@@ -11,7 +11,7 @@ class App extends Component {
   }
 
   getCells = () => {
-    const cells = window.sample75kdata.map((item) => {
+    const cells = window.sample50kdata.map((item) => {
       if(this.state.compareUsingColour){
         let colourClass = '';
         if(item.value > 5.5){

@@ -53,7 +53,7 @@
   $(document).ready(function(){
     $("#jqoutput").text('loading...');
       var opstring = "";
-       $.map(sample75kdata,function(item){
+       $.map(sample50kdata,function(item){
           opstring = opstring + '<span class="cell jqcell">'+ item.value +'</span>';
        });
        $("#jqoutput").html(opstring);

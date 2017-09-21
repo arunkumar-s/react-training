@@ -37,10 +37,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <div id="jqoutput">
-                      
                     </div>
                 </div>
-              </div>
+           </div>
           </div>
       </div>
       <div class="col-md-6">
@@ -54,13 +53,13 @@
   $(document).ready(function(){
     $("#jqoutput").text('loading...');
       var opstring = "";
-       $.each(sample50kdata,function(){
-          opstring = opstring + '<span class="cell jqcell">'+ this.value +'</span>';
+       $.map(sample75kdata,function(item){
+          opstring = opstring + '<span class="cell jqcell">'+ item.value +'</span>';
        });
        $("#jqoutput").html(opstring);
 
     $("#jqrun").on('click',function(){
-      console.time("updating view using jquery");
+  
        $(".jqcell").each(function(){
           var fval = parseFloat($(this).text());
           if(fval > 5.5){
@@ -73,9 +72,7 @@
           else{
             $(this).addClass('bg-danger');
           }
-
        });
-      console.timeEnd("updating view using jquery");
     });
 
   });
